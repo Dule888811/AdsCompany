@@ -1,0 +1,79 @@
+.users-auth {
+    display: flex;
+    padding-left: 72%;
+}
+#register-form-layout{
+    margin-left: 10%;
+}
+.register-form-center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.login-user{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form-input {
+    padding-bottom:10%;
+}
+.add-movies-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+ .movies {
+    padding-bottom: 3%;
+}
+.user-logout {
+     display: flex;
+     padding-left: 88%;
+     padding-top: -50%;
+     margin-top: -11%;
+ }
+#logout-form-layout {
+
+    position: fixed;
+    left: 88%;
+    top: 5%;
+}
+#formSubmit {
+    margin-top: 3%;
+}
+.movieForm {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+}
+div.pager {
+    text-align: left;
+}
+
+div.pager span {
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8;
+    text-align: center;
+    cursor: pointer;
+    background: #191919;
+    color: #ccc;
+    margin-right: 0.5em;
+}
+
+div.pager span.active {
+    background: #fff;
+    color:#191919;
+    font-weight:bold;
+    text-align:center;
+}
+
+
+
