@@ -30,7 +30,7 @@ if(isset($_FILES['image']) && $_FILES['image']['error']== UPLOAD_ERR_OK) {
       if ($uploadOk == 0) {
           echo "error uploaded file";
       } else {
-          if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_dir .  $_pdo->lastInsertId() . "."  . $imageFileType)) {
+          if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
               echo "Photo successfully uploaded.";
           } else {
               echo "Photo not successfully entered.";
@@ -41,5 +41,5 @@ if(isset($_FILES['image']) && $_FILES['image']['error']== UPLOAD_ERR_OK) {
 
 }
 
-    RegisterUser::register_new_user($_POST["username"],$_POST["password"],$_POST["first_name"],$_POST["last_name"]);
+    RegisterUser::register_new_user($_POST["username"],$_POST["password"],$_POST["first_name"],$_POST["last_name"],$target_file);
 ?>

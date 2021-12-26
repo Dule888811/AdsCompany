@@ -40,6 +40,16 @@ $user = GetUserByUsernsme::GetUser($_GET['username']);
         </div>
         <br><br>
 
+        <div class="movies">
+            <img src="<?php echo $user["image"]?>";
+        </div>
+        <br><br>
+
+        <div class="movies">
+            <label for="image">Change photo:</label>
+            <input type="file" id="image" name="image">
+        </div>
+        <br><br>
 
 
 
