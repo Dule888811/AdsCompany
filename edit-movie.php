@@ -4,6 +4,11 @@ $genres = Genres::getAllGenres();
 $movie = GetMovieById::MovieId($_GET['id']);
 
 ?>
+<head>
+    <title>Index</title>
+    <link rel='stylesheet' type="text/css" href="css/stlye.css">
+
+</head>
 <div class="movies-add" >
             <form action="update-movie.php" name="movies" class="movieForm" method="post">
                 <div class="movies">

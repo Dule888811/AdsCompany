@@ -10,6 +10,7 @@ require_once 'core/init.php';
 <?php
 $movies =GetMovies::getAllUMovies();
 $genres = Genres::getAllGenres();
+$users = GetAllUsers::GetUsers();
 if(!isset( $_SESSION['username']))
 {
     ?>
@@ -86,8 +87,17 @@ if(!isset( $_SESSION['username']))
                 </select><br>
         <input type="submit"  id="formSubmit"  value="Inser movie"><br/>
         </form>
-           <h3><a href='add-genres.php'>Add genre</a></h3>
-        </div>
+           <h3><a href='add-genres.php'>Add genre</a></h3><br><br>
+           <?php
+           foreach($users as $user)
+           {
+               if($_SESSION['username'] == $user['username'])
+               {
+          echo "<h3><a href='edit-users.php?username={$user['username']}'>Edit your profile</a></h3>";
+               }
+           }
+           ?>
+
 
 
 
