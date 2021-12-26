@@ -9,16 +9,17 @@ $movie = GetMovieById::MovieId($_GET['id']);
     <link rel='stylesheet' type="text/css" href="css/stlye.css">
 
 </head>
+<?php  echo "</br></br><a href='index.php'>Back to admin panel</a>"; ?>
 <div class="movies-add" >
             <form action="update-movie.php" name="movies" class="movieForm" method="post">
                 <div class="movies">
                     <input type="hidden" id="movieId" name="movieId" value= <?php echo $_GET['id']?>
                     <label for="title">title:
-                        <input type="text"  name="title" value=" . <?php echo $movie['title']  ?>" id="title"></label>
+                        <input type="text"  name="title" value="<?php echo $movie['title']?>" id="title"></label>
                 </div>
                 <div class=" movies">
 
-                    <p>Date: <input type="text" name="year" value=" . <?php echo $movie['year']  ?>" id="datepicker" /></p>
+                    <p>Date: <input type="text" name="year" value="<?php echo $movie['year']?>" id="datepicker" /></p>
                 </div>
 
                 <select class="selectpicker form-control" name="genre_id" id="genre_id" data-live-search="true">
@@ -34,9 +35,9 @@ $movie = GetMovieById::MovieId($_GET['id']);
                     }
                     ?>
                 </select><br><br>
-        <input type="submit"    value="Edit movie"><br/>
+                <input type="submit"    value="Edit movie"><br/>
         </form>
-        </div>
+</div>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>

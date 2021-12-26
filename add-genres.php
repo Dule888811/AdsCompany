@@ -71,7 +71,7 @@ if(!isset( $_SESSION['username']))
         <a href="logout.php" id="logout-form-layout">Logout</a>
     </div>
     <?php
-
+    echo "</br></br><a href='index.php'>Back to admin panel</a>";
 }
 ?>
 

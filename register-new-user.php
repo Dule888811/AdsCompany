@@ -42,4 +42,6 @@ if(isset($_FILES['image']) && $_FILES['image']['error']== UPLOAD_ERR_OK) {
 }
 
     RegisterUser::register_new_user($_POST["username"],$_POST["password"],$_POST["first_name"],$_POST["last_name"],$target_file);
+echo "</br></br><a href='index.php'>Back to admin panel</a>";
+
 ?>

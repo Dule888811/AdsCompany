@@ -40,10 +40,12 @@ $user = GetUserByUsernsme::GetUser($_GET['username']);
         </div>
         <br><br>
 
-        <div class="movies">
-            <img src="<?php echo $user["image"]?>";
-        </div>
+        <input type="submit" value="Edit your data">
+
     </form>
+    <div class="movies">
+        <img src="<?php echo $user["image"]?>";
+    </div>
         <br><br>
         <br><br>
         <form action ="update-photo.php" method="post" enctype="multipart/form-data">
@@ -54,6 +56,8 @@ $user = GetUserByUsernsme::GetUser($_GET['username']);
             <input type="submit" value="Enter new images">
         </form>
         <br><br>
+
+    <?php  echo "</br></br><a href='index.php'>Back to admin panel</a>"; ?>
 
 
 
