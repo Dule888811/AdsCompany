@@ -1,3 +1,6 @@
 <?php
 require_once 'core/init.php';
-UpdatePhotoUser::UpdatePhoto($_POST['idUser'],$_FILES["image"]);
+UpdatePhotoUser::UpdatePhoto($_POST['idUser'],$_FILES["image"], $_POST['userImg']);
+
+
+?>

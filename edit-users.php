@@ -43,8 +43,17 @@ $user = GetUserByUsernsme::GetUser($_GET['username']);
         <div class="movies">
             <img src="<?php echo $user["image"]?>";
         </div>
+    </form>
+        <br><br>
+        <br><br>
+        <form action ="update-photo.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" id="idUser" name="idUser" value= '<?php echo GetUserByUsernsme::GetUser($_SESSION['username'])['id'];  ?>'>
+            <input type="hidden" id="userImg" name="userImg" value=' <?php echo $user["image"];  ?>' >
+            <label for="image">Change photo:</label>
+            <input type="file" id="image" name="image">
+            <input type="submit" value="Enter new images">
+        </form>
         <br><br>
 
-      
 
 
