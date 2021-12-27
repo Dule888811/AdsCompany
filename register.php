@@ -11,6 +11,8 @@ require_once 'core/init.php';
     <div class="form-input ">
         <label for="username">username:
             <input type="text"  name="username" id="username"></label>
+        <button id="buttonUserName"  onclick="ajaxSearch()" name="button">Check user name</button>
+        <p id="freeUsername">...</p>
     </div>
     <div class="form-input">
         <label for="password">Password </label>
@@ -30,10 +32,7 @@ require_once 'core/init.php';
         <label for="image">image:
             <input type="file" name="image"></label>
     </div>
-    <input type="submit"    value="Create"><br/>
+    <input type="submit" namw="btn"   value="Create"><br/>
     </form>
 </div>
-<?php
-
-?>
-
+<<script type="text/javascript" src="js/main.js"></script>

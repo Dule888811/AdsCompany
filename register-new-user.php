@@ -32,16 +32,17 @@ if(isset($_FILES['image']) && $_FILES['image']['error']== UPLOAD_ERR_OK) {
       } else {
           if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
               echo "Photo successfully uploaded.";
+              RegisterUser::register_new_user($_POST["username"],$_POST["password"],$_POST["first_name"],$_POST["last_name"],$target_file);
           } else {
               echo "Photo not successfully entered.";
+              RegisterUser::register_new_user($_POST["username"],$_POST["password"],$_POST["first_name"],$_POST["last_name"],NULL);
           }
       }
   }else{
-      echo "<br/>Photo not entered!";
+      echo "<br/>User not have photo!";
 
 }
 
-    RegisterUser::register_new_user($_POST["username"],$_POST["password"],$_POST["first_name"],$_POST["last_name"],$target_file);
 echo "</br></br><a href='index.php'>Back to admin panel</a>";
 
 ?>
